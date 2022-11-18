@@ -13,31 +13,31 @@
     <table class="table table-striped table-dark">
     <tr class="center"> 
         <th class="text-center col-2">Subject</th>
-        <th class="text-center col-3">Assignment</th>
+        <th class="text-center col-2">Assignment</th>
         <th class="text-center col-4">Description</th>
         <th class="text-center col-2">Weight %</th>
         <th class="text-center col-5">Due Date</th>
-        <th class="text-center col-1"></th>
-        <th class="text-center col-1"></th>
+        <th class="text-center col-1">Edit</th>
+        <th class="text-center col-1">Delete</th>
         
     </tr>
     <!--Repeat the template-->
     <% for(let count=0; count<Assignmentlist.length; count++) { %>
         <tr class="center">
             <td class="text-center col-2"><%= Assignmentlist[count].subject %></td>
-            <td class="text-center col-3"><%= Assignmentlist[count].assignment %></td>
+            <td class="text-center col-2"><%= Assignmentlist[count].assignment %></td>
             <td class="text-center col-4"><%= Assignmentlist[count].description %></td>
             <td class="text-center col-2"><%= Assignmentlist[count].weight %></td>
             <td class="text-center col-5"><%= Assignmentlist[count].dueDate %></td>
             <td class="text-center col-1">
                 <a href="/assignment-list/edit/<%= Assignmentlist[count]._id %>"
                     class = "btn btn-primary">
-                    <i class = "fas fa-pencil-alt"></i> Edit </a>
+                    <i class = "fas fa-pencil-alt"></i></a>
                 </td>
             <td class="text-center col-1">
                 <a href="/assignment-list/delete/<%= Assignmentlist[count]._id %>"
                     class = "btn btn-danger">
-                    <i class = "fas fa-trash-alt"></i> Delete </a>
+                    <i class = "fas fa-trash-alt"></i></a>
                 </td>
         
         </tr>
