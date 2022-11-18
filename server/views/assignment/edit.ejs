@@ -8,14 +8,15 @@
             <h1><%= title %></h1>
             <form class="form" method="post">
 
-                <div class="form-group">
+               <div class="form-group">
                     <label for="subjectTextField"> Subject </label>
                     <input type="text" class="form-control"
                     id="subjectTextField"
                     placeholder="Enter the Subject Name"
                     name="subject" 
-                    value="<%=assignment.subject%>"
+                    value="<%= assignment.subject %>"
                     required>
+                </div>
 
                 <div class="form-group">
                     <label for="assignmentTextField"> Assignment </label>
@@ -23,17 +24,19 @@
                     id="assignmentTextField"
                     placeholder="Enter the Assignment Name"
                     name="assignment" 
-                    value="<%=assignment.assignment%>"
-                    required></textarea>
+                    value="<%= assignment.assignment %>"
+                    required>
+                </div>
 
                 <div class="form-group">
-                    <label for="descriptionTextField"> Description </label>
+                    <label for="descTextField"> Description </label>
                     <textarea type="text" class="form-control"
-                    id="descriptionTextField"
+                    id="descTextField"
                     placeholder="Enter the Assignment Description"
-                    name="description" 
-                    value="<%=assignment.description%>"
-                    required>
+                    name="description" required>
+                    <%= assignment.description %>
+                    </textarea>
+                </div>
 
                 <div class="form-group">
                     <label for="weightTextField"> Weight </label>
@@ -41,17 +44,17 @@
                     id="weightTextField"
                     placeholder="Enter the Weight of the Assignment"
                     name="weight" 
-                    value="<%=assignment.weight%>"
+                    value="<%= assignment.weight %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="datepriceTextField"> Due Date </label>
+                    <label for="dueDatepriceTextField"> Due Date </label>
                     <input type="text" class="form-control"
-                    id="dateTextField"
+                    id="dueDateTextField"
                     placeholder="Enter the Due Date of the Assignment"
-                    name="date" 
-                    value="<%=assignment.date%>"
+                    name="dueDate" 
+                    value="<%= assignment.dueDate %>"
                     required>
                 </div>
                     
